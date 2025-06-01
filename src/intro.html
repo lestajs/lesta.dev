@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .flower {
+            position: relative;
+            height: 48px;
+            width: 48px;
+            animation: finish 1s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-delay: 1.6s;
+            transform: scale(1.5);
+        }
+        .left {
+            position: absolute;
+            height: 0;
+            width: 0;
+            right: 22px;
+            bottom: 0;
+            border: 1px solid white;
+            box-sizing: border-box;
+            animation: aniL 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            will-change: width, height, left, right;
+            border-radius: 2em;
+            background-color: black;
+        }
+        .left:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            bottom: -1px;
+            width: 0;
+            height: 22px;
+            background-color: white;
+            animation: aniR .8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 1.1s;
+            border-radius: 0 2em 2em 0;
+            z-index: -1;
+        }
+        @keyframes aniL {
+            30% {
+                height: 0;
+                width: 0;
+            }
+            100% {
+                height: 100%;
+                width: 22px;
+            }
+        }
+        @keyframes aniR {
+            0% {
+              width: 0;
+
+            }
+            100% {
+              width: 38px;
+            }
+        }
+        @keyframes finish {
+            74% {
+              transform: scale(1.4);
+            }
+            90% {
+              opacity: .9;
+            }
+            94% {
+              transform: scale(2);
+              opacity: .5;
+              height: 48px;
+            }
+            100% {
+              opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flower">
+            <div class="left"></div>
+        </div>
+    </div>
+</body>
+</html>

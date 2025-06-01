@@ -1,0 +1,38 @@
+.titles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 8px;
+    margin: var(--s) 0;
+    img {
+        width: 100%;
+    }
+}
+a.title {
+    padding: max(16px, 5%);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-xxs);
+    color: var(--gray500);
+    width: 100%;
+    height: 80px;
+    outline: 1px solid var(--gray100);
+    position: relative;
+}
+.title > * {
+    height: 100%;
+}
+/*
+.title:first-child:after {
+    content: 'Platinum ✦';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0em;
+    color: white;
+    background-color: var(--black);
+    padding: 0 .4em;
+    border-radius: 0;
+    font-size: 13px;
+}
+ */

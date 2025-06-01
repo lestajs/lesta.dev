@@ -1,0 +1,13 @@
+.navLinks {
+  align-items: baseline;
+  gap: .3em .5em;
+}
+.navLinks a {
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  padding: .3em .8em;
+  position: relative;
+}
+.navLinks a:hover {
+  opacity: .7;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lesta.dev",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel serve src/index.html --dist-dir dev-dist",
+    "build-img": "parcel build assets/* --no-cache",
+    "build": "npm run build-img && parcel build src/index.html --dist-dir dist --no-source-maps",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lestejs/lesta.dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lestejs/leste.dev/issues"
+  },
+  "homepage": "lesta.dev",
+  "alias": {
+    "lesta": "../core/scripts/lesta.js"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.8.3",
+    "autoprefixer": "^10.4.2",
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.19"
+  },
+  "dependencies": {
+    "highlight.js": "^11.7.0",
+    "marked": "^12.0.1",
+    "postcss-nested": "^6.0.1"
+  },
+  "type": "module"
+}
