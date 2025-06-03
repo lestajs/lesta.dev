@@ -3,11 +3,11 @@
   background: #ff7b8c;
 }
 .navLinks:before {
-  content: 'API:';
+  content: 'docs:';
   margin-right: var(--xxs);
   font-size: 11px;
   font-weight: 400;
-  text-transform: none;
+  text-transform: capitalize;
 }
 .navLinks a:nth-child(7) {
   margin-left: 2em;
