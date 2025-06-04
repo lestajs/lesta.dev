@@ -5,7 +5,7 @@ import social from '../../../src/social'
 
 export default {
   template: `
-  <div class="banner">The current version is <strong>v0.0.1</strong>. See <a href="https://github.com/lestajs/core/releases" target="_blank">releases</a> for updates.</div>
+  <div class="banner"></div>
   <header class="header container lstHdr l-fx">
       <div class="menuL"><a href="/" class="logo" link><img src="${ logo }"></a></div>
       <div class="menuR"></div>
@@ -39,7 +39,8 @@ export default {
       },
       toTop: {
         onclick: () => window.scrollTo({ top: 0 })
-      }
+      },
+      banner: {}
     }
   },
   methods: {
@@ -53,5 +54,13 @@ export default {
       }
       return links[key] ? `"${links[key]}" target="_blank"` : `"/${key}" link`
     }
+  },
+  mounted() {
+    fetch('https://raw.githubusercontent.com/lestajs/core/refs/heads/main/package.json').then(async (response) => {
+      const packageData = await response.json()
+      const version = packageData.version
+      if (!version) return
+      this.node.banner.target.innerHTML = `The current version is <strong class="version">${version}</strong>. See <a href="https://github.com/lestajs/core/releases" target="_blank">releases</a> for updates.`
+    })
   }
 }
