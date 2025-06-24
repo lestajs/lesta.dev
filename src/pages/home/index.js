@@ -97,7 +97,7 @@ viewBox="0 0 300 52" style="enable-background:new 0 0 300 52;" xml:space="preser
     </section>
     <section class="warn">
       <div class="mudra"></div>
-      <h2>The right priorities</h2>
+      <h2>Right layer - simple solution</h2>
       <div class="desc">A fresh look at front-end dev.</div>
     </section>
     <section class="info l-fx">
