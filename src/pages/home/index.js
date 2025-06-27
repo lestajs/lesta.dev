@@ -35,7 +35,7 @@ viewBox="0 0 300 52" style="enable-background:new 0 0 300 52;" xml:space="preser
           </svg></i>
               GitHub
               </a>
-              <a class="video" href="/"><i></i>Lesta Videos</a>
+              <a class="video" href="https://www.youtube.com/@lestajs" target="_blank"><i></i>Lesta Videos</a>
         </div>
     </div>
     <section class="advantages">
@@ -97,7 +97,7 @@ viewBox="0 0 300 52" style="enable-background:new 0 0 300 52;" xml:space="preser
     </section>
     <section class="warn">
       <div class="mudra"></div>
-      <h2>Right layer - simple solution</h2>
+      <h2>Solve from the right side</h2>
       <div class="desc">A fresh look at front-end dev.</div>
     </section>
     <section class="info l-fx">
